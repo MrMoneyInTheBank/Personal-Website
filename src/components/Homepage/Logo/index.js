@@ -23,7 +23,7 @@ const Logo = () => {
             drawSVG: 0,
             duration: 20,
           })
-    
+        // why does this animation not show up every time or when I start the project from terminal 
         // gsap.fromTo(
         //   solidLogoRef.current,
         //   {
