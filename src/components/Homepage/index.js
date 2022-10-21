@@ -8,7 +8,7 @@ import './index.scss'
 import Logo from './Logo';
 
 const Home = () => {
-    const [letterClass, setLetterClass] = useState('text-animate')
+    const [letterClass, setLetterClass] = useState('text-animate-hover')
     const nameArray = ['n', 's', 'h', ',']
     const jobArray = ['A', 'n', ' ', 'I', 'n', 't', 'e', 'r', 'e', 's', 't', 'i', 'n', 'g', ' ', 'p', 'e', 'r', 's', 'o', 'n', '.']
 
