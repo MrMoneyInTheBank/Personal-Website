@@ -30,7 +30,7 @@ const Logo = () => {
         // nothing is displayed 
 
         .from(outlineLogoRef.current, {
-          drawSVG: 1,
+          drawSVG: 1, //idk what changing this value from 0 to 1 did but everything works fine now
           duration: 20,
         })
   
