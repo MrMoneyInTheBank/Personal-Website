@@ -2,8 +2,11 @@ import './index.scss'
 import LogoSa from '../../../assets/images/logo-s-1.png'
 import { useEffect, useRef } from 'react'
 import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin'
-import gsap from 'gsap-trial'
+import gsap from 'gsap'
 
+
+
+// console.log("This is working")
 const Logo = () => {
 
     const bgRef = useRef();
@@ -26,24 +29,25 @@ const Logo = () => {
         // this is why I think the solid logo skips past the drawing and 
         // nothing is displayed 
 
-      //   .from(outlineLogoRef.current, {
-      //     drawSVG: 0,
-      //     duration: 20,
-      //   })
+        .from(outlineLogoRef.current, {
+          drawSVG: 1,
+          duration: 20,
+        })
   
-      // gsap.fromTo(
-      //   solidLogoRef.current,
-      //   {
-      //     opacity: 0,
-      //   },
-      //   {
-      //     opacity: 1,
-      //     delay: 4,
-      //     duration: 4,
-      //   }
-      // )
+      gsap.fromTo(
+        solidLogoRef.current,
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          delay: 4,
+          duration: 4,
+        }
+      )
     }, [])
 
+    
     return (
         <div className="logo-container" ref={bgRef}>
           <img ref={solidLogoRef}
