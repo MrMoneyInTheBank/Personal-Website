@@ -1,16 +1,43 @@
 import { useEffect, useState } from 'react'
 import Loader from 'react-loaders'
+// import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import { useRef } from 'react'
+import emailjs from '@emailjs/browser'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
+
+  const refForm = useRef()
+
   useEffect(() => {
     const timeout = setTimeout(() => {
       setLetterClass('text-animate-hover')
     }, 3000)
     return () => clearTimeout(timeout)
   }, [])
+
+  const sendEmail = (e) => {
+    e.preventDefault()
+
+    emailjs
+      .sendForm(
+        'gmail',
+        'template_794kprw',
+        refForm.current,
+        '3gvOabs-ZfFUP6Bwh'
+      )
+      .then(
+        () => {
+          alert('Message successfully sent!')
+          window.location.reload(false)
+        },
+        () => {
+          alert('Failed to send the message, please try again')
+        }
+      )
+  }
   return (
     <>
       <div className="container contact-page">
@@ -24,12 +51,12 @@ const Contact = () => {
           </h1>
           <p>
             I'm always interested in taking part in ambitious, data-driven
-            projects I'm also currently looking for positions as a Quant or SWE.
-            Feel free to reach out to me for potential openings, sharing
+            projects I'm also currently looking for positions as a Quant or a
+            SWE. Feel free to reach out to me for potential openings, sharing
             projects, or just to chit-chat!
           </p>
           <div className="contact-form">
-            <form>
+            <form ref={refForm} onSubmit={sendEmail}>
               <ul>
                 <li className="half">
                   <input type="text" name="name" placeholder="Name" required />
@@ -53,7 +80,7 @@ const Contact = () => {
                 <li>
                   <textarea
                     placeholder="Message"
-                    nname="message"
+                    name="message"
                     required
                   ></textarea>
                 </li>
