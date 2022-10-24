@@ -1,6 +1,9 @@
-
+import { faPython, faGolang, faReact, faRust, faJsSquare, faGitAlt } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
+// import CPP from '../About/svg-icons/cplusplus.svg'
+// import TF from '../About/svg-icons/tensorflow.svg'
 import './index.scss'
 
 const About = () => {
@@ -37,6 +40,28 @@ const About = () => {
                     I am insatiably curious and always learning. Outside tech, I am an avid chess player and speedcuber.
                     After mathematics, my favorite thing in the whole wide world is ice cream. 
                 </p>
+            </div>
+            <div className="stage-cube-cont">
+                <div className="cubespinner">
+                    <div className="face1">
+                        <FontAwesomeIcon icon={faPython} color="#FFD343" />
+                    </div>
+                    <div className="face2">
+                        <FontAwesomeIcon icon={faRust} color="#F06529" />
+                    </div>
+                    <div className="face3">
+                        <FontAwesomeIcon icon={faGolang} color="#28A4D9" />
+                    </div>
+                    <div className="face4">
+                        <FontAwesomeIcon icon={faReact} color="#5ED4F4" />
+                    </div>
+                    <div className="face5">
+                        <FontAwesomeIcon icon={faJsSquare} color="#EFD81D" />
+                    </div>
+                    <div className="face6">
+                        <FontAwesomeIcon icon={faGitAlt} color="#EC4D28" />
+                    </div>
+                </div>
             </div>
         </div>
     )
