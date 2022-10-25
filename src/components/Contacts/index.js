@@ -51,7 +51,7 @@ const Contact = () => {
           </h1>
           <p>
             I'm always interested in taking part in ambitious, data-driven
-            projects I'm also currently looking for positions as a Quant or a
+            projects. I'm also currently looking for positions as a Quant or a
             SWE. Feel free to reach out to me for potential openings, sharing
             projects, or just to chit-chat!
           </p>
