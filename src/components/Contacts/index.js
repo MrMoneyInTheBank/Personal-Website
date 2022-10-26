@@ -99,9 +99,7 @@ const Contact = () => {
           <br />
           Boston, MA, 
           <br />
-          02120
-          <br />
-          U.S.
+          02120, U.S.
           <br />
           <span>thisisatest@gmail.com</span>
 

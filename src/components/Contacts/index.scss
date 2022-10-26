@@ -34,6 +34,7 @@
 
   input[type='text'],
   input[type='email'] {
+    font-family: 'Coolvetica';
     width: 100%;
     border: 0;
     background: #115173;
@@ -45,6 +46,7 @@
   }
 
   textarea {
+    font-family: 'Coolvetica';
     width: 100%;
     border: 0;
     background: #115173;
@@ -78,7 +80,7 @@
   width: 267px;
   padding: 20px;
   color: #fff;
-  font-family: 'Helvetica';
+  font-family: 'Coolvetica';
   font-size: 17px;
   font-weight: 300;
   opacity: 0;
@@ -86,6 +88,7 @@
   animation-fill-mode: forwards;
 
   span {
+    font-family: 'Coolvetica';
     font-size: 16px;
     display: block;
     padding-top: 20px;

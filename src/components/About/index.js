@@ -1,10 +1,11 @@
 import {
   faPython,
   faGolang,
-  faReact,
+  // faReact, deciding
   faRust,
   faJsSquare,
   faGitAlt,
+  faJava,
 } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useEffect, useState } from 'react'
@@ -66,7 +67,7 @@ const About = () => {
               <FontAwesomeIcon icon={faGolang} color="#28A4D9" />
             </div>
             <div className="face4">
-              <FontAwesomeIcon icon={faReact} color="#5ED4F4" />
+              <FontAwesomeIcon icon={faJava} color="#5ED4F4" />
             </div>
             <div className="face5">
               <FontAwesomeIcon icon={faJsSquare} color="#EFD81D" />
