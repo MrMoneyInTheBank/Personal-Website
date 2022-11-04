@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^13.5.0",
     "animate.css": "^4.1.1",
     "devicon-react-svg": "^0.2.3",
+    "drawsvg": "^1.1.0",
     "gsap": "file:gsap-bonus.tgz",
     "gsap-trial": "^3.11.3",
     "loaders.css": "^0.1.2",

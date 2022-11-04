@@ -1,7 +1,7 @@
 import './index.scss'
 import LogoSa from '../../../assets/images/logo-s-1.png'
 import { useEffect, useRef } from 'react'
-import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin'
+// import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin'
 import gsap from 'gsap'
 
 const Logo = () => {
@@ -10,25 +10,17 @@ const Logo = () => {
   const solidLogoRef = useRef()
 
   useEffect(() => {
-    gsap.registerPlugin(DrawSVGPlugin)
+    // gsap.registerPlugin(DrawSVGPlugin)
 
-    gsap
-      .timeline()
-      .to(bgRef.current, {
-        duration: 1,
-        opacity: 1,
-      })
+    gsap.timeline().to(bgRef.current, {
+      duration: 1,
+      opacity: 1,
+    })
 
-      // The outline fades in on every refresh so that is working fine
-      // The problem is with the drawSVG function
-      // it only works once and not again upon refreshing
-      // this is why I think the solid logo skips past the drawing and
-      // nothing is displayed
-
-      .from(outlineLogoRef.current, {
-        drawSVG: 1, //idk what changing this value from 0 to 1 did but everything works fine now
-        duration: 20,
-      })
+    // .from(outlineLogoRef.current, {
+    //   drawSVG: 1,
+    //   duration: 20,
+    // })
 
     gsap.fromTo(
       solidLogoRef.current,
